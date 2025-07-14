@@ -27,6 +27,7 @@ public class SecurityConfig {
 				.anyRequest().authenticated()
 				)
 		.formLogin(form -> form
+				.loginPage("/index.html")
 				.loginProcessingUrl("/api/auth/login")
 				.failureUrl("/login.html?error=true")
 				.defaultSuccessUrl("/index.html", true)
